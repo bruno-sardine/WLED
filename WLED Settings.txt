@@ -1,0 +1,52 @@
++---------------+-----------------+--------------+----------------------------+--------------------+--------------+---------+---------+-----------------------------+
+| Holiday       | Effect          | Preset       | Effect Parameters          | Color Palette      | Color 1      | Color 2 | Color 3 | Notes                       |
++---------------+-----------------+--------------+----------------------------+--------------------+--------------+---------+---------+-----------------------------+
+| New Years     |                 | Playlist 34  |                            |                    |              |         |         |                             |
+|               | Twinklefox      | 16           | Speed 87, rate 55          | Colors 1&2         | Blue         | White   |         |                             |
+|               | Twinklefox      | 17           | Speed 87, rate 55          | Color 1            | Warm White   | Black   | Black   |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| New Years Eve | Fireworks 1D    | 18           | Gravity 34, Firing Sd. 127 | Rainbow            |              |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Valentines    | Fairy           | 19           | Speed 191, flashers 145    | Colors Only        | Red          | Pink    | White   |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| St Patricks   | Blends          | 20           | Shift 127, blend 127       | Colors 1&2         | Green        | Black   |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Easter        |                 | Playilst 35  |                            |                    |              |         |         |                             |
+|               | Noise 3         | 21           | Speed 34                   | Hilt               |              |         |         |                             |
+|               | Solid           | 31           | Segmented                  | Green, Lt Blue     | Yellow, Pink |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Cinco de Mayo | Solid           | 32           | Segmented                  | Green, Wt, Red     |              |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Memorial Day  | Washing Machine | 22           | Speed 51, int 150          | Color Gradient     | Red          | White   | Blue    |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| 4th of July   |                 | Playlist  11 |                            |                    |              |         |         |                             |
+|               | Fireworks 1D    | 7            | Gravity 16, Firing Sd. 149 | Colors Only        | Red          | Black   | Blue    |                             |
+|               | Saw             | 8            | Speed 116 / Width 122      | Colors Only        | Red          | White   | Blue    | Mirror Effect in segment    |
+|               | Color Twinkles  | 9            | Fade 47, spawn 74          | Colors Only        | Red          | White   | Blue    |                             |
+|               | Glitter         | 10           | Speed 27, int 106          | Colors Only        | Red          | White   | Blue    | Gl=Blue                     |
+|               | Washing Machine | 13           | Speed 51, int 150          | Color Gradient     | Red          | White   | Blue    |                             |
+|               | Dancing Shadows | 6            | speed 51, shadow 146       | Colors Only        | Red          | White   | Blue    |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Labor Day     | Washing Machine | 22           | Speed 51, int 150          | Color Gradient     | Red          | White   | Blue    |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Halloween     |                 | Playilst 36  |                            |                    |              |         |         |                             |
+|               | Twinklecat      | 23           | Speed/rate 42              | Color 1            | FF6600       | Black   |         |                             |
+|               | Ripple          | 24           | Speed 15, wave 45          | Color 1            | FF6600       | Black   |         |                             |
+|               | Aurora          | 25           | Speed 32, inten 139        | Colors 1&2         | FF6600       | 7b0096  |         | Purple brightness about 60% |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Thanksgiving  | Solid           | 33           | Segmented                  | Yellow, Orange, Wt |              |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Christmas     |                 | Playilst 37  |                            |                    |              |         |         |                             |
+|               | Twinklecat      | 26           | Speed 60, rate 130         | Colors Only        | Red          | Black   | Green   |                             |
+|               | Twinklefox      | 27           |                            | C9                 |              |         |         |                             |
+|               | Washing Machine | 28           | Defaults                   | Colors 1&2         | Red          | White   |         |                             |
+|               | Flow            | 29           | Speed 10, Inten 255        | Colors Only        | Red          | Green   | White   |                             |
+|               | Twinklecat      | 30           | Speed 30, Rate 130         | Rainbow            |              |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Lights off    |                 | 100          |                            |                    |              |         |         |                             |
+| Lights On     |                 | 101          |                            |                    |              |         |         |                             |
+|               |                 |              |                            |                    |              |         |         |                             |
+| Weather       |                 |              |                            |                    |              |         |         |                             |
+|               | Rain            | 14           | effect 156, spwn 192       | Colors 1&2         | Aqua         | Black   |         |                             |
+|               | Solid           | 15           |                            |                    | Yellow       | Black   |         |                             |
++---------------+-----------------+--------------+----------------------------+--------------------+--------------+---------+---------+-----------------------------+
