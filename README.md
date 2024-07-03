@@ -2,7 +2,6 @@
 Scripts used to automate WLED through the holidays and show weather
 
 Inspiration came from https://printspired.shop/blogs/news/off-topic-controlling-wled-with-a-custom-holiday-schedule
-
 That site’s approach was to use the os call calendar() to figure out holidays.
 
 For calendar() on macOS: I’m either dumb as shit, or it’s yet another os command on the Mac that differs just enough from every other implementation to be a hassle. Best I can tell is Apple ditched the calendar files (e.g. calendar.usholidays) in 14.4, and even using copies of calendar files still will not work. Hence this project. I'm probably just dumb.  I tend to reinvent the wheel a lot.
@@ -39,10 +38,10 @@ Consider this crontab showing what the static and dynamic entries are:
         2. 59 23 * * * /Users/cmelvin/WLED-LightsOff.sh
         ```
     4. ESC, :x to save and quit
-3. In each script, replace [your username] with your actual username reflecting the full path of your User directory, without the brackets:  For example, /Users/[your username]/ becomes /Users/greg/  By default, a logfile (WLED.log) is written to your desktop.  You can change this location here.  The user directory entires are only for the log file.  Please KEEP a log file, because there are 77 echo commands that want to be written.
-4. In the weather and the sunrise scripts, change [airport code] to the closest airport to you, without the brackets.  For example, wttr.in/[airport code]?1 becomes wttr.in/JFK?1
+3. In each script, replace [your username] with your actual username reflecting the full path of your User directory, without the brackets:  For example, `/Users/[your username]/` becomes `/Users/greg/`  By default, a logfile (WLED.log) is written to your desktop.  You can change this location here.  The user directory entires are only for the log file.  Please KEEP a log file somewhere, because there are 77 echo commands that want to be written.
+4. In the weather and the sunrise scripts, change [airport code] to the closest airport to you, without the brackets.  For example, `wttr.in/[airport code]?1` becomes `wttr.in/JFK?1`
 5. Except for WLED-sunset_sunrise.sh, the remaining 3 scripts have a curl command that uses the IP address of the ESP32 module (your WLED box).  You need to just search for x.x.x.x and replace with your own IP address.
-6.  THE HARD PART: In the file WLED_holiday_lights.sh, you need to replace every PRESET variable to match your own PRESET for a WLED effect.  This can be either a preset or playlist number.  These replacements begin under the line “Set a WLED Preset variable based on holidays and how long I want them to run”.  I've also uploaded an ASCII table of all of my holiday settings for you to use.  In reallity, I got most off of reddit, stuck it all together, and changed the speeds to my liking for my length of lights
+6.  THE HARD PART: In the file WLED_holiday_lights.sh, you need to replace every PRESET variable to match your own PRESET for a WLED effect.  This can be either a preset or playlist number.  These replacements begin under the line `“Set a WLED Preset variable based on holidays and how long I want them to run”`.  I've also uploaded an ASCII table of all of my holiday settings for you to use.  In reallity, I got most off of reddit, stuck it all together, and changed the speeds to my liking for my length of lights
 7. `$ chmod +x WLED*`
 
 ### MacOS Permissions:
@@ -66,29 +65,32 @@ Finder > Go > Go To Folder > /usr/sbin
 Look for “cron”
 Drag it to Full Disk Access 
 
-Repeat for the other executables or files.
+Repeat for the other executables or files.  The WLED files can just be dragged from Finder.
 
 ### FAC (Frequently Asked Comments)
-C: You know this exact thing exists [here]
+C: You know this exact thing exists [here]<br>
 A: No, I didn’t.  Again, I’m famous for reinventing the wheel.
 
-C: printf() is the standard for writing to log files, not echo. 
+C: printf() is the standard for writing to log files, not echo. <br>
 A: I know. I just didn’t feel like dealing with formatting to account for dashes and percents signs   
 
-C: The code is sloppy / you rely too much on IF statements / some of your IFs are not used properly / there are easier ways of checking what you’re doing.
+C: The code is sloppy / you rely too much on IF statements / some of your IFs are not used properly / there are easier ways of checking what you’re doing.<br>
 A: I know. It’s the result of intermittent testing to see how I was progressing. Once I was done, I didn’t care enough to clean it up and make the scripts tighter. 
 
-C: bash is not the most efficient way to do this.  You should have used something like python
-A: Sounds like a great project for you to do… go for it!  Chatgpt could probably spit it out if you pasted in the scripts.
+C: bash is not the most efficient way to do this.  You should have used something like python<br>
+A: Sounds like a great project for you to do… go for it!  ChatGPT could probably spit out Python code if you pasted in the scripts.
 
 ### FAQ
-Q: Can you add / alter this feature?  
-A: The scripts are as-is. Feel free to pull to your repository, download, change, even sell it. 
+Q: Can you add / alter this feature?  <br>
+A: The scripts are as-is. Feel free to pull to your repository, download, change, sell it. I won't be making any more additions here.
 
-Q: Will this work on another OS besides MacOS?
+Q: Will this work with GoVee Lights? <br>
+A: I think it can.  The meat of the project is figuring out the holidays.  With GoVee you need an API key, and I think you make similar POST calls with curl.  I don't see why this could not be repurposed.
+
+Q: Will this work on another OS besides MacOS?<br>
 A: Maybe linux?  I’m sure there’s something goofy about Mac vs Linux where one OS likes a single backtick vs a quote, or no space after a bracket.  But they should be pretty simple to get through.
 
-Q: Why are you using full paths everywhere?
+Q: Why are you using full paths everywhere?<br>
 A: Because I’m a full path kind of guy.  It’s also more friendly with cron 
 
 
