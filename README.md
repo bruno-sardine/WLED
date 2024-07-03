@@ -5,7 +5,7 @@ Inspiration came from https://printspired.shop/blogs/news/off-topic-controlling-
 
 That site’s approach was to use the os call calendar() to figure out holidays.
 
-Calendar() on macOS: I’m either dumb as shit, or it’s yet another os command on the Mac that differs just enough from every other implementation to be a hassle. Best I can tell is Apple ditched the calendar files (e.g. calendar.usholidays) in 14.4, and even using copies of calendar files still will not work. Hence this project. 
+For calendar() on macOS: I’m either dumb as shit, or it’s yet another os command on the Mac that differs just enough from every other implementation to be a hassle. Best I can tell is Apple ditched the calendar files (e.g. calendar.usholidays) in 14.4, and even using copies of calendar files still will not work. Hence this project. I'm probably just dumb.  I tend to reinvent the wheel a lot.
 
 ### The basic workflow is this: 
 1. Run a job at 5am to get the sunrise and sunset times and alter the crontab, daily, to reflect these new times.  
@@ -17,12 +17,12 @@ Calendar() on macOS: I’m either dumb as shit, or it’s yet another os command
 
 ### List of files to be used:
 You need the files to be named with a dash or underscore.  This is because we re-write the crontab daily and have to re-write the entries with “WLED_” while the files with “WLED-“ are static. 
-WLED-sunset_sunrise.sh	
-WLED_weather_check.sh
-WLED_holiday_lights.sh
-WLED-LightsOff.sh	
+- WLED-sunset_sunrise.sh	
+- WLED_weather_check.sh
+- WLED_holiday_lights.sh
+- WLED-LightsOff.sh	
 
-Consider this crontab:
+Consider this crontab showing what the static and dynamic entries are:
 ```sh
 00 05 * * * /Users/[username]/WLED-sunset_sunrise.sh  <- static entry, never changes
 59 23 * * * /Users/[username]/WLED-LightsOff.sh   <- static entry, never changes
@@ -30,7 +30,7 @@ Consider this crontab:
 26 20 * * * /Users/[username]/WLED_holiday_lights.sh <-dynamic entry, changes daily
 ```
 ### Installation:
-1. Please all files in your home directory: /Users/[your username]
+1. Place all files in your home directory: /Users/[your username]
 2. If you don’t have one, create a user-level cron file.  If you already have a cron file, it should be okay because we only replace entries with “WLED_” in them.
     1. $ crontab -e
     2. At least add these 2 entries:
@@ -70,7 +70,7 @@ Repeat for the other executables or files.
 
 ### FAC (Frequently Asked Comments)
 C: You know this exact thing exists [here]
-A: No, I didn’t.  I’m famous for reinventing the wheel.
+A: No, I didn’t.  Again, I’m famous for reinventing the wheel.
 
 C: printf() is the standard for writing to log files, not echo. 
 A: I know. I just didn’t feel like dealing with formatting to account for dashes and percents signs   
