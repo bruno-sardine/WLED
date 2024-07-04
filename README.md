@@ -34,8 +34,8 @@ Consider this crontab showing what the static and dynamic entries are:
     1. $ crontab -e
     2. At least add these 2 entries:
         ```sh 
-        1. 00 05 * * * /Users/cmelvin/WLED-sunset_sunrise.sh
-        2. 59 23 * * * /Users/cmelvin/WLED-LightsOff.sh
+        1. 00 05 * * * /Users/[username]/WLED-sunset_sunrise.sh
+        2. 59 23 * * * /Users/[username]/WLED-LightsOff.sh
         ```
     4. ESC, :x to save and quit
 3. In each script, replace [your username] with your actual username reflecting the full path of your User directory, without the brackets:  For example, `/Users/[your username]/` becomes `/Users/greg/`  By default, a logfile (WLED.log) is written to your desktop.  You can change this location here.  The user directory entires are only for the log file.  Please KEEP a log file somewhere, because there are 77 echo commands that want to be written.
