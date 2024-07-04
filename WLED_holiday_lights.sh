@@ -292,7 +292,7 @@ fi
 
 if [[ $PRESET ]]; then
 echo "Sending request to turn on Lights..." >> $logfile
-    response=$(curl -s -X POST "http://192.168.86.42/json/state" -H "Content-Type: application/json" -d '{"on":true,"bri":255,"ps":"'"$PRESET"'"}')
+    response=$(curl -s -X POST "http://x.x.x.x/json/state" -H "Content-Type: application/json" -d '{"on":true,"bri":255,"ps":"'"$PRESET"'"}')
     # Check if the response contains {"success":true}
     if [[ "$response" == *'"success":true'* ]]; then
        echo "Request good: $response" >> $logfile
@@ -301,7 +301,7 @@ echo "Sending request to turn on Lights..." >> $logfile
     fi
 else
 echo -e "  No holdays lights for today.\n Making sure lights stay off..." >> $logfile
-    response=$(curl -s -X POST "http://192.168.86.42/json/state" -H "Content-Type: application/json" -d '{"on":false}')
+    response=$(curl -s -X POST "http://x.x.x.x/json/state" -H "Content-Type: application/json" -d '{"on":false}')
     # Check if the response contains {"success":true}
     if [[ "$response" == *'"success":true'* ]]; then
        echo "Request good: $response" >> $logfile
