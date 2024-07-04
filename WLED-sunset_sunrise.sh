@@ -9,7 +9,7 @@ RIGHTNOW=$(date +"%A, %B %d, %Y %I:%M:%S %p")
 echo $RIGHTNOW >> $logfile
 
 
-# Function to fetch sunrise and sunset times
+# Function to fetch sunrise and sunset times.  I had to add this because one time is returned nothing.
 fetch_times() {
   setrise=$(curl -s "http://wttr.in/[airport code]?format=%S+%s")
   read sunrise sunset <<< "$setrise"
