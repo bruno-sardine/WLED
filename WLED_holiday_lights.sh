@@ -6,7 +6,7 @@
 # Labor Day, Halloween, Thanksgiving, Christmas, New Years Eve
 
 # create log file
-logfile=/Users/cmelvin/Desktop/WLED.log
+logfile=/Users/[your username]/Desktop/WLED.log
 echo -e "\n-------- Start Holiday Check --------" >> $logfile
 RIGHTNOW=$(date +"%A, %B %d, %Y %I:%M:%S %p")
 echo $RIGHTNOW >> $logfile
