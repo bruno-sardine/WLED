@@ -69,7 +69,7 @@ Repeat for the other executables or files.  The WLED files can just be dragged f
 
 ### FAC (Frequently Asked Comments)
 C: You know this exact thing exists [here]<br>
-A: No, I didn’t.  Again, I’m famous for reinventing the wheel.
+A: No, I didn’t.  I did some light-googling, found people using homeassistant or some other smart-home thing, and then I found the blog post at the top of this readme.  Again, I’m famous for reinventing the wheel.  If this already exists, I'm sure it's better than these scripts.
 
 C: printf() is the standard for writing to log files, not echo. <br>
 A: I know. I just didn’t feel like dealing with formatting to account for dashes and percents signs   
@@ -91,7 +91,7 @@ Q: Will this work on another OS besides MacOS?<br>
 A: Maybe linux?  I’m sure there’s something goofy about Mac vs Linux where one OS likes a single backtick vs a quote, or no space after a bracket.  But they should be pretty simple to get through.
 
 Q: Why are you using full paths everywhere?<br>
-A: Because I’m a full path kind of guy.  It’s also more friendly with cron 
+A: Because I’m a full path kind of guy. 
 
 
 
