@@ -45,7 +45,7 @@ Consider this crontab showing what the static and dynamic entries are:
 7. `$ chmod +x WLED*`
 
 ### MacOS Permissions:
-I went overboard, but in System Settings > Privacy and Security > Full Disk Access, these items all have full disk access (I think only terminal and cron need it though)
+I went overboard (and I don't need to be reminded how "dangerous" it is to grant bash FDA), but in System Settings > Privacy and Security > Full Disk Access, these items all have full disk access (I think only terminal and cron need it though)
 - bash
 - cron
 - curl
