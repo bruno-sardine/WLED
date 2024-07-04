@@ -1,10 +1,10 @@
 # WLED Scheduler with Weather for MacOS
 Scripts used to automate WLED through the holidays and show weather
 
-Inspiration came from https://printspired.shop/blogs/news/off-topic-controlling-wled-with-a-custom-holiday-schedule
+Inspiration came from https://printspired.shop/blogs/news/off-topic-controlling-wled-with-a-custom-holiday-schedule <br>
 That site’s approach was to use the os call calendar() to figure out holidays.
 
-For calendar() on macOS: I’m either dumb as shit, or it’s yet another os command on the Mac that differs just enough from every other implementation to be a hassle. Best I can tell is Apple ditched the calendar files (e.g. calendar.usholidays) in 14.4, and even using copies of calendar files still will not work. Hence this project. I'm probably just dumb.  I tend to reinvent the wheel a lot.
+For calendar() on macOS: I’m either dumb as shit, or it’s yet another os command on the Mac that differs just enough from every other implementation to be a hassle. The best I can tell is Apple ditched the calendar files (e.g. calendar.usholidays) in 14.4, and even using copies of a calendar file still will not work. Hence this project. I'm probably just dumb.  I tend to reinvent the wheel a lot.
 
 ### The basic workflow is this: 
 1. Run a job at 5am to get the sunrise and sunset times and alter the crontab, daily, to reflect these new times.  
@@ -30,7 +30,7 @@ Consider this crontab showing what the static and dynamic entries are:
 ```
 ### Installation:
 1. Place all files in your home directory: /Users/[your username]
-2. If you don’t have one, create a user-level cron file.  If you already have a cron file, it should be okay because we only replace entries with “WLED_” in them.
+2. If you don’t have one, create a user-level cron file.  If you already have a cron file, it should be okay because we only replace entries with “WLED_” in them. But maybe you should backup your existing crontab entries just in case.
     1. $ crontab -e
     2. At least add these 2 entries:
         ```sh 
